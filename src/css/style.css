@@ -1,0 +1,39 @@
+:root{--ink:#1d1b17;--parch:#f4ecd8;--parch2:#ebe0c4;--night:#0d1b3a;--green:#1f4a3d;--gold:#c9a96a;--muted:#6b6454}
+*{box-sizing:border-box}
+html{font-size:19px}
+body{margin:0;font-family:"EB Garamond",Georgia,serif;color:var(--ink);background:var(--parch);line-height:1.6}
+body.home{background:var(--night);color:#e9e4d4}
+a{color:inherit}
+.site-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1.2rem 1.5rem;max-width:56rem;margin:0 auto}
+.wordmark{font-family:Cinzel,serif;font-size:1.1rem;letter-spacing:.14em;text-decoration:none;text-transform:uppercase}
+.site-header nav a{margin-left:1.4rem;text-decoration:none;font-size:.95rem;letter-spacing:.04em}
+.site-header nav a:hover{text-decoration:underline}
+main{max-width:56rem;margin:0 auto;padding:0 1.5rem 3rem}
+.hero{text-align:center;padding:5rem 0 3.5rem}
+.hero h1{font-family:Cinzel,serif;font-weight:400;font-size:clamp(2.2rem,7vw,3.6rem);letter-spacing:.2em;text-transform:uppercase;margin:0}
+.gloss{font-style:italic;color:var(--gold);margin:.4rem 0 1.6rem}
+.tagline{font-size:1.2rem;max-width:30rem;margin:0 auto}
+.threshold{background:linear-gradient(180deg,var(--night),var(--green));border:1px solid rgba(201,169,106,.4);padding:2.2rem 2rem;text-align:center;border-radius:2px}
+.threshold h2{font-family:Cinzel,serif;font-weight:400;letter-spacing:.16em;margin:.2rem 0 1rem;font-size:1.6rem}
+.threshold p{max-width:34rem;margin:.6rem auto}
+.label{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.button{display:inline-block;margin-top:.6rem;padding:.7rem 1.8rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-family:Cinzel,serif;letter-spacing:.14em;font-size:.85rem;text-transform:uppercase}
+.button:hover{background:var(--gold);color:var(--night)}
+.latest{margin-top:3rem}
+.latest h2{font-family:Cinzel,serif;font-weight:400;letter-spacing:.14em;font-size:1.1rem;text-transform:uppercase}
+.list{list-style:none;padding:0;margin:0 0 1rem}
+.list li{padding:.35rem 0;border-bottom:1px solid rgba(128,118,96,.25)}
+.list li span{float:right;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.list a{text-decoration:none}.list a:hover{text-decoration:underline}
+.reading{max-width:38rem;margin:2rem auto 0}
+.reading h1{font-family:Cinzel,serif;font-weight:400;font-size:1.9rem;letter-spacing:.06em;line-height:1.25;margin:.2rem 0 1.6rem}
+.group{font-family:Cinzel,serif;font-weight:400;letter-spacing:.14em;font-size:1rem;text-transform:uppercase;margin:2rem 0 .4rem}
+.kind{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:0}.kind a{color:var(--muted);text-decoration:none}
+.prose p{margin:0 0 1.1rem}
+.poem p{margin:0 0 1.5rem}
+.poem hr{border:0;border-top:1px solid var(--muted);opacity:.5;margin:2.2rem 0}
+.plate{margin:0 auto 2rem;max-width:22rem}.plate img{width:100%;height:auto;display:block}
+.plate figcaption{font-size:.85rem;font-style:italic;color:var(--muted);margin-top:.5rem;text-align:right}
+.back{margin-top:2.5rem;font-size:.95rem}
+.site-footer{text-align:center;font-size:.85rem;color:var(--muted);padding:2rem 1rem 3rem}
+body.home .site-footer{color:#8fa0c0}

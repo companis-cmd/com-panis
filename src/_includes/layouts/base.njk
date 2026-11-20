@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% set pageTitle = (title + " · " + site.name) if title and page.url != "/" else site.name + " — " + site.tagline %}
+  {% set pageDesc = description or site.description %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta property="og:type" content="{% if form %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% if image %}<meta property="og:image" content="{{ site.url }}{{ image }}">{% endif %}
+  <meta name="twitter:card" content="{% if image %}summary_large_image{% else %}summary{% endif %}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="{{ bodyClass }}">
+  <header class="site-header">
+    <a class="wordmark" href="/">{{ site.name }}</a>
+    <nav>
+      <a href="/writing/">Writing</a>
+      <a href="{{ site.thresholdUrl }}">The Threshold</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <p>{{ site.name }} · <a href="/feed.xml">Feed</a></p>
+  </footer>
+</body>
+</html>

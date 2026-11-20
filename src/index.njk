@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+bodyClass: home
+---
+<section class="hero">
+  <h1>{{ site.name }}</h1>
+  <p class="gloss">one who shares bread</p>
+  <p class="tagline">{{ site.tagline }}</p>
+</section>
+
+<section class="threshold">
+  <p class="label">The novel</p>
+  <h2>The Threshold</h2>
+  <p>Begun in the spring of 2022 and still being edited. Read it free in your browser. The AI voices that answer as you read need your own Anthropic API key.</p>
+  <p><a class="button" href="{{ site.thresholdUrl }}">Read the novel</a></p>
+</section>
+
+<section class="latest parchment-block">
+  <h2>Writing</h2>
+  <ul class="list">
+    {% for post in collections.writing %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a> <span>{{ post.data.kind }}</span></li>
+    {% endfor %}
+  </ul>
+  <p><a href="/writing/">All writing →</a></p>
+</section>

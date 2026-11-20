@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+bodyClass: parchment
+---
+<article class="reading">
+  <p class="kind"><a href="/writing/">{{ kind }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if image %}
+  <figure class="plate">
+    <img src="{{ image }}" alt="{{ imageAlt }}" width="900" loading="eager">
+    {% if imageCredit %}<figcaption>{{ imageCredit }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="{{ form }}">{{ content | safe }}</div>
+  <p class="back"><a href="/writing/">← All writing</a></p>
+</article>

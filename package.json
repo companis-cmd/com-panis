@@ -1,0 +1,17 @@
+{
+  "name": "com-panis",
+  "version": "1.0.0",
+  "description": "Com Panis — essays, stories and poems",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "@11ty/eleventy-plugin-rss": "^3.1.0",
+    "markdown-it": "^15.0.3",
+    "sharp": "^0.35.5"
+  },
+  "type": "module",
+  "private": true
+}
